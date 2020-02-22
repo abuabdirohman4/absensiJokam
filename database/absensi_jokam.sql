@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 22, 2020 at 02:52 AM
+-- Generation Time: Feb 22, 2020 at 03:24 AM
 -- Server version: 10.0.17-MariaDB
 -- PHP Version: 5.6.14
 
@@ -23,10 +23,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `meta_index_peserta_pengajian`
+-- Table structure for table `meta_index_peserta`
 --
 
-CREATE TABLE `meta_index_peserta_pengajian` (
+CREATE TABLE `meta_index_peserta` (
   `id` int(10) NOT NULL,
   `pengajian_title_id` int(10) NOT NULL,
   `name` varchar(50) NOT NULL
@@ -35,10 +35,10 @@ CREATE TABLE `meta_index_peserta_pengajian` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `meta_value_peserta_pengajian`
+-- Table structure for table `meta_value_peserta`
 --
 
-CREATE TABLE `meta_value_peserta_pengajian` (
+CREATE TABLE `meta_value_peserta` (
   `id` int(10) NOT NULL,
   `peserta_pengajian_id` int(10) NOT NULL,
   `meta_index_peserta_pengajian_id` int(10) NOT NULL,
@@ -112,15 +112,15 @@ CREATE TABLE `user` (
 --
 
 --
--- Indexes for table `meta_index_peserta_pengajian`
+-- Indexes for table `meta_index_peserta`
 --
-ALTER TABLE `meta_index_peserta_pengajian`
+ALTER TABLE `meta_index_peserta`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `meta_value_peserta_pengajian`
+-- Indexes for table `meta_value_peserta`
 --
-ALTER TABLE `meta_value_peserta_pengajian`
+ALTER TABLE `meta_value_peserta`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -158,14 +158,14 @@ ALTER TABLE `user`
 --
 
 --
--- AUTO_INCREMENT for table `meta_index_peserta_pengajian`
+-- AUTO_INCREMENT for table `meta_index_peserta`
 --
-ALTER TABLE `meta_index_peserta_pengajian`
+ALTER TABLE `meta_index_peserta`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `meta_value_peserta_pengajian`
+-- AUTO_INCREMENT for table `meta_value_peserta`
 --
-ALTER TABLE `meta_value_peserta_pengajian`
+ALTER TABLE `meta_value_peserta`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `pengajian_event`
