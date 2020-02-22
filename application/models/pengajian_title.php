@@ -15,12 +15,4 @@ class pengajian_title extends CI_Model
     public function get_pengajian_title_by_id($pengajian_title_id)
     {
     }
-
-    public function remove_user($user_id)
-    {
-    }
-
-    public function update_user($user_data)
-    {
-    }
 }
