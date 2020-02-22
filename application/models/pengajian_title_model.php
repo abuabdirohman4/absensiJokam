@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class pengajian_title extends CI_Model
+class pengajian_title_model extends CI_Model
 {
 
     public function get_all_pengajian_title()
