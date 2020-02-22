@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 22, 2020 at 03:24 AM
+-- Generation Time: Feb 22, 2020 at 03:58 AM
 -- Server version: 10.0.17-MariaDB
 -- PHP Version: 5.6.14
 
@@ -40,8 +40,8 @@ CREATE TABLE `meta_index_peserta` (
 
 CREATE TABLE `meta_value_peserta` (
   `id` int(10) NOT NULL,
-  `peserta_pengajian_id` int(10) NOT NULL,
-  `meta_index_peserta_pengajian_id` int(10) NOT NULL,
+  `peserta_id` int(10) NOT NULL,
+  `meta_index_peserta_id` int(10) NOT NULL,
   `value` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -74,10 +74,10 @@ CREATE TABLE `pengajian_title` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `peserta_pengajian`
+-- Table structure for table `peserta`
 --
 
-CREATE TABLE `peserta_pengajian` (
+CREATE TABLE `peserta` (
   `id` int(10) NOT NULL,
   `pengajian_title_id` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -91,7 +91,7 @@ CREATE TABLE `peserta_pengajian` (
 CREATE TABLE `presence` (
   `id` int(10) NOT NULL,
   `pengajian_event_id` int(10) NOT NULL,
-  `peserta_pengajian_id` int(10) NOT NULL,
+  `peserta_id` int(10) NOT NULL,
   `status` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -136,9 +136,9 @@ ALTER TABLE `pengajian_title`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `peserta_pengajian`
+-- Indexes for table `peserta`
 --
-ALTER TABLE `peserta_pengajian`
+ALTER TABLE `peserta`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -178,9 +178,9 @@ ALTER TABLE `pengajian_event`
 ALTER TABLE `pengajian_title`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `peserta_pengajian`
+-- AUTO_INCREMENT for table `peserta`
 --
-ALTER TABLE `peserta_pengajian`
+ALTER TABLE `peserta`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `presence`
