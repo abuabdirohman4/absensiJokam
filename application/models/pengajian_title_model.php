@@ -4,8 +4,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class pengajian_title_model extends CI_Model
 {
 
-    public function get_all_pengajian_title()
-    {
+    public function __construct() {
+        parent::__construct();
+    }
+
+    public function get_all_pengajian_title() {
+        
+        $query = $this->db->get('pengajian_title');
+
+        return $query->result();
     }
 
     public function get_all_pengajian_title_by_user_id($user_id)
