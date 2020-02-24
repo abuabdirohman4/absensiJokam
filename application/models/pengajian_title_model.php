@@ -8,18 +8,18 @@ class pengajian_title_model extends CI_Model
         parent::__construct();
     }
 
-    public function get_all_pengajian_title() {
+    public function get_all_by_id($pengajian_title_id) {
         
-        $query = $this->db->get('pengajian_title');
+        $query = $this->db->get_where('pengajian_title', array('id' => $pengajian_title_id));
 
-        return $query->result();
+        return $query->result();    
     }
-
-    public function get_all_pengajian_title_by_user_id($user_id)
+    
+    public function get_all_by_user_id($user_id)
     {
     }
 
-    public function get_pengajian_title_by_id($pengajian_title_id)
+    public function get_by_id($pengajian_title_id)
     {
     }
 

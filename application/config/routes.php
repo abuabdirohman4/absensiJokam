@@ -53,4 +53,17 @@ $route['default_controller'] = 'Welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+// Public area
+$route['login'] = 'auth_controller/login';
+$route['presensi/(.+)'] = 'presence_board_controller/presence/$1';
+
+// User area
 $route['user/view-pengajian'] = 'user_area_controller/view_all_pengajian_title';
+$route['user/add-pengajian'] = 'user_area_controller/add_pengajian_title';
+$route['user/edit-pengajian/(.+)'] = 'user_area_controller/edit_pengajian_title/$1';
+$route['user/dashboard'] = 'user_area_controller/dashboard';
+
+// API
+$route['api/peserta/(.+)'] = 'presence_board_controller/get_peserta/$1';
+$route['api/presence-peserta/(.+)'] = 'presence_board_controller/presence_peserta/$1';
+$route['api/reg-peserta'] = 'presence_board_controller/reg_peserta';
